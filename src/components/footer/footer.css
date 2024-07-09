@@ -1,0 +1,131 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+.footer {
+  background-color:#0E0E0E;
+    padding: 0px 10px;
+    /* min-height: 400px; */
+    margin-bottom: 50px;
+    position: relative;
+  }
+  .line.above{
+    padding: 0 0 0 50px;
+    background-color: var(--color-primary);
+    width: 10%;
+    height: 5px;
+    display: block;
+    position: relative;
+    margin-top: -4rem;
+    left: 170px;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4rem;
+ 
+  }
+
+  .footer-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  h2 {
+    font-family:"Manrope", sans-serif;
+    font-weight: bolder;
+    font-size: 2.5rem;
+    color: white;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.833);
+    
+  }
+  .nav-link {
+    text-decoration: none;
+    padding-top: 1rem;
+  }
+  p {
+    font-size: 1rem;
+    color: #ffffffd4;
+
+    
+  }
+
+  .text-sections {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    text-decoration: none;
+    color: #979797;
+    width: 50%;
+    margin-bottom: 3rem;
+
+
+  
+  }
+
+  ul {
+    display: flex;
+    justify-content:flex-end;
+    gap: 1rem;
+    list-style-type: none;
+    position: absolute;
+    top: 250px;
+    right: 170px;
+
+  }
+
+
+  @media (max-width:769px){
+
+    .footer-title {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    ul {
+      position: absolute;
+     top: 470px;
+      right: 50px;
+    }
+
+  }
+
+  @media (max-width:376px){
+    .footer-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar-links {
+      display: flex;
+      flex-direction: column;
+    }
+    .text-sections{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    ul{
+     position: absolute;
+     top: 700px;
+     right: 160px;
+    }
+  .line.above{
+    position: relative;
+    left:90px
+  }
+
+  }
+

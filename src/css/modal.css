@@ -1,0 +1,42 @@
+/* Modal */
+
+.ReactModal__Overlay {
+    top: 92px !important;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+  }
+  
+  .checkout-modal {
+    max-width: 540px;
+    padding: 48px;
+    border-radius: 8px;
+  
+    background-color: #fff;
+  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .cart-modal {
+    width: 380px;
+    max-width: 100%;
+    padding: 35px;
+    border-radius: 8px;
+  
+    background-color: #fff;
+  
+    position: absolute;
+    top: 10px;
+    transform: translate(0%, 0%);
+    right: 10%;
+  
+    max-height: 500px;
+    overflow-y: auto;
+  }
+  
+  @media (min-width: 1450px) {
+    .cart-modal {
+      right: calc((100vw - 1110px) / 2);
+    }
+  }

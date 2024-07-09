@@ -1,17 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import data from './data/data.json'
+import CartContextProvider from "./context/CartContext";
+import "./css/App.css";
+import "./css/modal.css";
+import RoutesComponent from "./routes/Routes";
 
 function App() {
-  const [count, setCount] = useState(0)
-console.log(data)
   return (
     <>
-      hello data
+      <CartContextProvider>
+        <RoutesComponent />
+      </CartContextProvider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

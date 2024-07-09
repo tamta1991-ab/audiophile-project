@@ -1,0 +1,4 @@
+.item-descrip {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,42 @@
+.content {
+    width: 100%;
+    background-image: url(../../../public/Bitmap.png);
+    background-repeat: no-repeat;
+    min-height: 320px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    
+    padding-left: 95px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.content .text {
+    font-size: 28px;
+    line-height: 2px;
+    font-weight: bold;
+    color:black
+}
+
+@media (max-width:769px){
+    .content{
+        width: 100%;
+        min-height: 320px;
+        padding-left: 4rem;
+        background: url(../speaker7-section/tablet.png);
+    }
+}
+
+@media (max-width:376px) {
+    .content{
+        width: 100%;
+        min-height: 320px;
+        background: url(../speaker7-section/mobile.png);
+        padding-left: 2rem;
+    }
+}
+

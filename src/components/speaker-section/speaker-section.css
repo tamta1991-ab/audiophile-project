@@ -1,0 +1,120 @@
+.speaker-section {
+    margin-bottom: 6rem;
+  }
+  
+  .speaker-section-container {
+    background-color: #d87d4a;
+  
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .speaker-section-content {
+    max-width: 350px;
+    min-height: 560px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 3;
+  }
+  
+  .speaker-section-content .speaker-name{
+    font-size: 3.5rem;
+    color: white;
+    padding-bottom: 1.5rem;
+    padding-top: 1rem;
+    font-weight: bold;
+  
+  }
+  .speaker-section-content h5 {
+    padding-bottom: 2.5rem;
+    color: rgba(255, 255, 255, 0.733);
+    padding-right: 4rem;
+  }
+  .speaker-section img {
+    position: absolute;
+  }
+  .speaker-img {
+    bottom: -15px;
+    left: 100px;
+    max-width: 410px;
+    z-index: 2;
+  }
+  
+  .circle-img {
+    left: -120px;
+    bottom: -300px;
+  
+    z-index: 1;
+  }
+
+  @media (max-width:769px) {
+    .speaker-section-container{
+      max-width: 690px;
+      min-height: 720px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+
+    }
+    .speaker-img{
+      width: 200px;
+      height: 230px;
+      position: absolute;
+      top: 50px;
+      left: 220px;
+
+    }
+
+    .circle-img{
+      position: absolute;
+      top: -10px;
+      left: -10px;
+    }
+    .speaker-section-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .speaker-section-content h5{
+      padding: 0 0 40px;
+    }
+
+    
+  }
+  @media (max-width:376px) {
+    .speaker-section-container{
+      max-width: 330px;
+      min-height: 600px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+
+    }
+    .speaker-img{
+      width: 180px;
+      height: 210px;
+      position: absolute;
+      top: 30px;
+      left: 55px;
+
+    }
+    .speaker-section-content{
+      margin-top: 5rem;
+    }
+
+
+    
+  }
+
