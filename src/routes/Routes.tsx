@@ -3,7 +3,7 @@ import Home from "../pages/Home";
 import Products from "../pages/Products";
 import Product from "../pages/product";
 import Checkout from "../pages/checkout/Checkout";
-import Notfound from "../pages/404";
+import Notfound from "../pages/404/404";
 import Layout from "../Layout/Layout";
 
 const RoutesComponent = () => {
@@ -17,6 +17,8 @@ const RoutesComponent = () => {
 
         <Route path="/products/:productName" element={<Products />} />
         <Route path="/products/:productName/:productId" element={<Product />} />
+
+
       </Route>
     </Routes>
     

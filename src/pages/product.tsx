@@ -34,7 +34,6 @@ const Product = () => {
     queryKey: ["product", productId],
     queryFn: getData,
   });
-console.log(prod)  
 
   useEffect(() => {
     if (item?.amount) {

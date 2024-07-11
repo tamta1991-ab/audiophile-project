@@ -80,6 +80,7 @@ const Products = () => {
           textTransform: 'uppercase'
         }}>
           {productName}
+        
         </div>
       </div>
       <div className="container">
