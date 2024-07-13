@@ -115,6 +115,7 @@
 .others-section {
     display: flex;
     flex-direction: column;
+    gap: 2rem;
 
 }
 .others-section .like {
@@ -129,36 +130,38 @@
 }
 .others-section .others {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-.others-cont{
-    display: flex;
-    justify-content: space-between;
     gap: 30px;
 }
-.others-cont img {
-    border-radius: 10px;
-    margin-bottom: 40px;
-
-}
-.others-item {
+.other-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+    justify-content: space-between;
 }
-
+.other-images {
+    display: flex;
+    justify-content: space-between;
+}
+.other-images img {
+    border-radius: 10px;
+}
 .others-name {
     font-size: 1.5rem;
     font-weight: bold;
     letter-spacing: 1.71px;
     color:black;
-    width: 176px;
     text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
 
 }
+
+.other-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 
 @media (max-width : 769px) {
@@ -233,6 +236,7 @@
        height: 390px;
        padding-bottom: 220px;
     }
+
 
 }
 
@@ -328,38 +332,41 @@
     .others-section {
         width: 95%;
         margin-top: 260px;
-        padding-right: 100px;
-        margin-left: -40px;
+        /* padding-right: 100px;
+        margin-left: -40px; */
 
     }
     .others {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
         max-width: 350px;
+        gap: 3rem;
+        
     }
-    .others-cont {
-        display: flex;
-        flex-direction: column;
-        max-width: 350px;
-
-}
-.others-item-image {
-    width: 350px;
-}
-.others-item-image img {
+   .other-container {
     width: 100%;
     display: flex;
-}
-.others-item {
-    width: 90%;
- display: flex;
- flex-direction: column;
- align-items: center;
-}
-.others-name{
-    text-align: center;
-}
+        flex-direction: column;
+   }
+   .other-images {
+    width:100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    border:none;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    
+   }
+   .other-images img {
+    width: 50%;
+   }
+
+   .other-button{
+    margin-bottom: 3rem;
+   }
+
+
 
 
 

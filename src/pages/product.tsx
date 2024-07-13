@@ -11,7 +11,10 @@ import Footer from "../components/footer/Footer";
 import GoBackButton from "../components/GoBack/goback";
 import ProductSection from "../components/product-section/ProductSection";
 import { useQuery } from "react-query";
+import data from "../data/data.json"
+import { Other } from "./Products";
 
+const products: ProductType[] = [];
 
 const Product = () => {
   const { productId} = useParams();
@@ -22,7 +25,12 @@ const Product = () => {
     return 0;
   });
 
+  const products = data.products
 
+  const others = products.map((other) => other.others?.map((ot) => ot.slug))
+  
+  
+  console.log(others)
 
   const getData = async () => {
     const res = await fetch("http://localhost:3000/products/" + productId);
@@ -40,6 +48,17 @@ const Product = () => {
       setNum(item.amount);
     }
   }, [item?.amount]);
+
+  const findProductBySlug = (slug: string) => {
+    return products.find((product) => product.slug === slug);
+  };
+
+  // Debugging: log the data
+  console.log("Products:", products);
+  console.log("Current Product Others:", prod?.others);
+  const renderedSlugs = new Set<string>();
+
+
 
   return (
     <>
@@ -121,43 +140,33 @@ const Product = () => {
           </div>
           <div className="others-section">
             <div className="like">you may like</div>
-
             <div className="others">
-              <div className="others-cont">
-                {prod?.others.map((product) => (
-                  <div key={product.slug}>
-                    <div className="others-item-image">
-                      <img
-                      
-                        src={`/${product.image.desktop}`}
-                        alt={product.name}
-                      />
+  
+                      {prod?.others.map((other: Other, index) => {
+                          const matchingProduct = findProductBySlug(other.slug);
+                          if (matchingProduct && !renderedSlugs.has(other.slug)) {
+                            renderedSlugs.add(other.slug);
+                        return (
+                          <div key={`${other.slug}-${index}` }  className="other-container" >
+                            <div className="other-images">
+                              <img src={`/${other.image.desktop}`} alt="product" />
 
-                    </div>
-                    <div className="others-item">
-                      <div className="others-name">{product.name}</div>
-                    <div>
-                        {product.slug.includes('headphones') ? (
-                          <Button isLink={true} variant="primary" to={`/products/headphones`}>
-                            See Product
-                          </Button>
-                        ) : product.slug.includes('speaker') ? (
-                          <Button isLink={true} variant="primary" to={`/products/speakers`}>
-                            See Product
-                          </Button>
-                        ) : product.slug.includes('earphones') ? (
-                          <Button isLink={true} variant="primary" to={`/products/earphone`}>
-                            See Product
-                          </Button>
-                        ) : null}
-                    </div>
+                            </div>
+                            <div className="others-name">{other.name}</div>
 
-                    </div>
-            </div>
-    
-        
-      ))}
-    </div>
+                          <div className="other-button">
+                            <Button isLink={true} variant="primary" to={`/products/${prod.category}/${matchingProduct.id}`}>
+                              See Product
+                            </Button>
+
+                          </div>
+                          </div>
+                        );
+                    }
+                    return null;
+                  })}
+                  
+            
             </div>
 
           
