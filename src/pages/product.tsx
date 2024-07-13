@@ -121,6 +121,7 @@ const Product = () => {
           </div>
           <div className="others-section">
             <div className="like">you may like</div>
+
             <div className="others">
               <div className="others-cont">
                 {prod?.others.map((product) => (
@@ -135,9 +136,21 @@ const Product = () => {
                     </div>
                     <div className="others-item">
                       <div className="others-name">{product.name}</div>
-                      <Button isLink={true} variant="primary" to={`/products/`}> 
-                          see product
-                        </Button>
+                    <div>
+                        {product.slug.includes('headphones') ? (
+                          <Button isLink={true} variant="primary" to={`/products/headphones`}>
+                            See Product
+                          </Button>
+                        ) : product.slug.includes('speaker') ? (
+                          <Button isLink={true} variant="primary" to={`/products/speakers`}>
+                            See Product
+                          </Button>
+                        ) : product.slug.includes('earphones') ? (
+                          <Button isLink={true} variant="primary" to={`/products/earphone`}>
+                            See Product
+                          </Button>
+                        ) : null}
+                    </div>
 
                     </div>
             </div>
