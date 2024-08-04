@@ -19,6 +19,17 @@ const NavModal = ({ modalIsOpen, setIsOpen }: Props) => {
       className="nav-modal"
   
     >
+      <button type="button"
+       style={{
+        border : 'none',
+        color:'#979797',
+        backgroundColor: 'transparent',
+        position:"sticky",
+        top:'3rem',
+        left: '3rem'
+        
+    }}
+      onClick={() => setIsOpen(false)}>CLOSE </button>
       <ProductSection/>
 
     </Modal>

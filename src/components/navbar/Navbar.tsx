@@ -21,14 +21,17 @@ const Navbar = () => {
       <div className="navbar">
         <div className="container navbar-container">
           <button
-            onClick={() => setNavModalIsOpen(!navModalIsOpen)}            className="menu"
+            onClick={() => setNavModalIsOpen(!navModalIsOpen)}   
+            className="menu"
           >
             <div className="line"></div>
             <div className="line"></div>
             <div className="line"></div>
           </button>
 
-          <h2 className="navbar-name">audiophile</h2>
+          <h2 className="navbar-name">
+            
+            audiophile</h2>
           <div className="links-container">
             <nav className="navbar-links">
               <Link

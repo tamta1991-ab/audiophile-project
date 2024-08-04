@@ -21,7 +21,8 @@ const CartComponent = ({ modalIsOpen, setIsOpen }: Props) => {
   };
 
   return (
-    <Modal
+    <div>
+    <Modal 
       className="cart-modal"
       onRequestClose={() => setIsOpen(false)}
       shouldCloseOnOverlayClick={true}
@@ -94,6 +95,8 @@ const CartComponent = ({ modalIsOpen, setIsOpen }: Props) => {
         
       </div>
     </Modal>
+
+    </div>
   );
 }; 
 

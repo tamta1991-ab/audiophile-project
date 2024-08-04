@@ -96,7 +96,7 @@ const Product = () => {
             <div className="features">
               <div className="text">features</div>
               <div className="features-text">
-              {prod?.features}
+              {prod?.features.split('\n\n')}
                 </div>
         
             </div>

@@ -47,7 +47,7 @@ span {
 
 }
 
-@media (max-width:376px){
+ @media (max-width:376px){
     .container-content{
         padding: 12rem 1.5rem;
     }
@@ -56,5 +56,17 @@ span {
     }
     .image{
         width: 100%;
+    } 
+} 
+/* @media screen  and (min-width:376px){
+
+     .container-content{
+        padding: 12rem 1.5rem;
     }
-}
+    .text-container{
+        width: 100%;
+    }
+    .image{
+        width: 100%;
+    }
+} */

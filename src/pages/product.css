@@ -162,7 +162,9 @@
 }
 
 
-
+/* @media (min-width : 769px){
+    
+} */
 
 @media (max-width : 769px) {
    
@@ -170,6 +172,7 @@
         width: 690px;
         display: flex;
         justify-content: flex-start;
+        gap: 3rem;
         margin-left: -150px;
     }
     
@@ -186,7 +189,7 @@
     }
     
     .item-right-section {
-        width: 100%;
+        min-width: 290px;
         margin-left: -150px;
 
     }
@@ -195,8 +198,9 @@
         flex-direction: column;
     }
     .features-text{
-        width: 690px;
+        min-width: 500px;
         height: 320px;
+        margin-bottom: 2rem;
 
     }
     .includes {

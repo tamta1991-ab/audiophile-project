@@ -25,3 +25,18 @@
     justify-content: space-between;
     margin-bottom: 1.3rem;
 }
+
+@media (max-width:769px) {
+    .modal-title{
+        width: 100%;
+    }
+    
+}
+
+@media (max-width:376px) {
+    .cart-modal{
+        margin-right: 2rem;
+
+    }
+  
+}

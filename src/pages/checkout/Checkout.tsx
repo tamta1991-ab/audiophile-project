@@ -236,7 +236,10 @@ const Checkout = () => {
             </div>
             <div className="vat">
               <b>vat (included)</b>
-              <div className="amount">$1079</div>
+              <div className="amount">$ {cart.reduce(
+                ( sum : number, item : cartItemType) => (Math.floor((sum + item.product.price * item.amount)/5)),
+              0
+            )}</div>
             </div>
             <div className="grand">
               <b>grand total</b>
@@ -271,7 +274,8 @@ const Checkout = () => {
 
             
           >
-            <div style={{marginBottom: '30px'}}>
+            <div  className="icon"
+            style={{marginBottom: '30px'}}>
               <img src={iconImg} alt="icon" />
             </div>
             <div className="thank">
@@ -298,7 +302,7 @@ const Checkout = () => {
                       </div>
                       <b>${item.product.price}</b>  
                     </div> 
-                    <b>x{item.amount}</b>
+                    <b className="item-amount">x{item.amount}</b>
 
                     </div>
                   </div>
@@ -316,7 +320,7 @@ const Checkout = () => {
               <div className="right-aside">
               <b>grand total</b>
               <div className="grand-price">
-                ${cart.reduce((sum :number, item:cartItemType) => sum + item.product.price * item.amount, 0)}
+                ${cart.reduce((sum :number, item:cartItemType) => 50+ sum + item.product.price * item.amount, 0)}
               </div>
                 
             </div>  
